@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Restoran - Bootstrap Restaurant Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="website icon" type="png" href="img/logo.jpeg">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <div id="navbar"></div>
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Customization </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Custom Design</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Reservation Start -->
+        <div class="container-xxl px-0 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <div class="video"></div>
+                </div>
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                        <h5 class="section-title ff-secondary text-start fw-normal" style="color: #e6bc68;">Bespoke Service</h5>
+                        <h1 class="mb-4" style="color: #e6bc68;">Custom Your Design</h1>
+                        <form id="customForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required minlength="" pattern="[A-Za-z\s]+">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="metal-type" required>
+                                            <option value="" disabled selected>Select Metal Type</option>
+                                            <option value="gold">Gold</option>
+                                            <option value="silver">Silver</option>
+                                            <option value="platinum">Platinum</option>
+                                        </select>
+                                        <label for="metal-type">Choose Metal Type</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="gemstone" required>
+                                            <option value="" disabled selected>Select Gemstone</option>
+                                            <option value="diamond">Diamond</option>
+                                            <option value="ruby">Ruby</option>
+                                            <option value="sapphire">Sapphire</option>
+                                            <option value="emerald">Emerald</option>
+                                        </select>
+                                        <label for="gemstone">Choose Gemstone</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating date" id="date3" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" required />
+                                        <label for="datetime">Date & Time</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="custom-size" placeholder="Custom Size" required pattern="[0-9]+(\.[0-9]+)?">
+                                        <label for="custom-size">Custom Size</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px" required minlength="10"></textarea>
+                                        <label for="message">Special Request</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" id="upload-image" accept="image/*" required>
+                                        <label for="upload-image">Upload Image</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="error-message" style="color: red; display: none;">Please fill out all fields correctly.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Info Start -->
+        <div class="container-xxl py-5">
+            <div>
+                <p>Name: <span id="txtName"></span></p>
+                <p>Email: <span id="txtEmail"></span></p>
+                <p>Password: <span id="txtPass"></span></p>
+                <p>Age: <span id="txtAge"></span></p>
+                <img id="txtImg" src="" alt="User Image">
+            </div>
+            <button onclick="Logout()">Logout</button>
+        </div>
+        <!-- User Info End -->
+
+        <!-- Footer Start -->
+        <div id="footer"></div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        document.getElementById('customForm').addEventListener('submit', function(event) {
+            var form = event.target;
+            var isValid = form.checkValidity();
+            if (!isValid) {
+                event.preventDefault();
+                event.stopPropagation();
+                document.getElementById('error-message').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'none';
+            }
+            form.classList.add('was-validated');
+        }, false);
+
+        const logName = localStorage.getItem("logName");
+
+        if (logName) {
+            var data = JSON.parse(localStorage.getItem("Student"));
+            const user = data.find(std => std.na === logName);
+
+            if (user) {
+                document.getElementById('txtName').innerHTML = user.na;  
+                document.getElementById('txtEmail').innerHTML = user.em;
+                document.getElementById('txtPass').innerHTML = user.pa;
+                document.getElementById('txtAge').innerHTML = user.ag;
+                document.getElementById('txtImg').setAttribute('src', user.im);
+            }
+        }
+
+        function Logout() {
+            localStorage.setItem("logName", "");
+            window.location.assign("login.html");
+        }
+    </script>
+</body>
+</html>

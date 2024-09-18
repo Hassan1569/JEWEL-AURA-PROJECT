@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JEWEL AURA</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .cart-section {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.cart-table-wrap {
+    overflow-x: auto;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #333;
+}
+
+.cart-table-head th {
+    background-color: #702c2b;
+    color: #fff;
+    padding: 15px;
+}
+
+.table-head-row {
+    border-bottom: 2px solid #e6bc68;
+}
+
+.table-body-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.product-remove {
+    width: 5%;
+    text-align: center;
+}
+
+.product-remove a {
+    color: #702c2b;
+    font-size: 18px;
+}
+
+.product-image img {
+    width: 80px;
+    height: auto;
+}
+
+.product-name,
+.product-price,
+.product-quantity,
+.product-total {
+    padding: 15px 10px;
+}
+
+.product-quantity input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.total-section {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.total-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.total-table-head th {
+    background-color: #702c2b;
+    color: #fff;
+    padding: 10px;
+}
+
+.total-data {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.total-data td {
+    padding: 10px 0;
+}
+
+.cart-buttons {
+    margin-top: 20px;
+}
+
+.cart-buttons .boxed-btn {
+    background-color: #702c2b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cart-buttons .boxed-btn:hover {
+    background-color: #e6bc68;
+    color: #702c2b;
+}
+
+.cart-buttons .boxed-btn.black {
+    background-color: #e6bc68;
+    color: #702c2b;
+}
+
+.cart-buttons .boxed-btn.black:hover {
+    background-color: #702c2b;
+    color: #fff;
+}
+
+.coupon-section {
+    margin-top: 30px;
+}
+
+.coupon-section h3 {
+    margin-bottom: 20px;
+    color: #702c2b;
+}
+
+.coupon-form-wrap form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coupon-form-wrap form p {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.coupon-form-wrap input[type="text"] {
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.coupon-form-wrap input[type="submit"] {
+    width: 100px;
+    background-color: #702c2b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.coupon-form-wrap input[type="submit"]:hover {
+    background-color: #e6bc68;
+    color: #702c2b;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <div id="navbar"></div>
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Find Your Birthstone</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Birthstone Finder</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+<!-- cart -->
+<div class="cart-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="cart-table-wrap">
+                    <table class="cart-table">
+                        <thead class="cart-table-head">
+                            <tr class="table-head-row">
+                                <th class="product-remove"></th>
+                                <th class="product-image">Product Image</th>
+                                <th class="product-name">Name</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-total">Total</th>
+                                
+                                <th class="product-total">Checkout</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr class="table-body-row">
+                                <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
+                                <td class="product-image"><img src="" alt=""></td>
+                                <td class="product-name">Strawberry</td>
+                                <td class="product-price">$85</td>
+                                <td class="product-quantity"><input type="number" placeholder="0"></td>
+                                <td class="product-total">1</td>
+                            </tr> -->
+                           
+                        </tbody>
+                        
+                    </table>
+
+                  
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-4">
+                <div class="total-section">
+                    <table class="total-table">
+                        <thead class="total-table-head">
+                            <tr class="table-total-row">
+                                <th>Total</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="total-data">
+                                <td><strong>Subtotal: </strong></td>
+                                <td>$500</td>
+                            </tr>
+                            <tr class="total-data">
+                                <td><strong>Shipping: </strong></td>
+                                <td>$45</td>
+                            </tr>
+                            <tr class="total-data">
+                                <td><strong>Total: </strong></td>
+                                <td>$545</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   
+                </div>
+
+               
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- end cart -->
+
+
+
+
+
+
+        <!-- Footer Start -->
+        <div id="footer"></div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+   <script src="js/artificial.js"></script>
+
+
+
+
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartTableBody = document.querySelector('.cart-table tbody');
+    let subtotal = 0;
+  
+    cart.forEach(item => {
+      let row = document.createElement('tr');
+      row.className = 'table-body-row';
+      
+      row.innerHTML = `
+        <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
+        <td class="product-image"><img src="${item.pimg}" alt="${item.pname}"></td>
+        <td class="product-name">${item.pname}</td>
+        <td class="product-price">PKR ${item.pprice}</td>
+        <td class="product-quantity"><input type="number" value="${item.pquantity}" min="1"></td>
+        <td class="product-total">PKR ${item.ptotal}</td>
+         <td class="product-quantity">
+    <input type="number" value="${item.pquantity}" min="1" onchange="updateQuantity(event, ${index})">
+</td>
+
+          <td class="cart-buttons"> <a href="checkout.html" class="boxed-btn black">Checkout</a></td>
+      `;
+  
+      cartTableBody.appendChild(row);
+      subtotal += item.ptotal;
+    });
+  
+    document.querySelector('.total-section .total-table tbody').innerHTML = `
+      <tr class="total-data">
+        <td><strong>Subtotal: </strong></td>
+        <td>PKR ${subtotal}</td>
+      </tr>
+      <tr class="total-data">
+        <td><strong>Shipping: </strong></td>
+        <td>PKR 45</td>
+      </tr>
+      <tr class="total-data">
+        <td><strong>Total: </strong></td>
+        <td>PKR ${subtotal + 45}</td>
+      </tr>
+    `;
+  });
+  
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartTableBody = document.querySelector('.cart-table tbody');
+    let subtotal = 0;
+
+    function updateCartTable() {
+        cartTableBody.innerHTML = '';
+        subtotal = 0;
+
+        cart.forEach((item, index) => {
+            let row = document.createElement('tr');
+            row.className = 'table-body-row';
+
+            row.innerHTML = `
+                <td class="product-remove"><a href="#" data-index="${index}" onclick="removeFromCart(event)"><i class="far fa-window-close"></i></a></td>
+                <td class="product-image"><img src="${item.pimg}" alt="${item.pname}"></td>
+                <td class="product-name">${item.pname}</td>
+                <td class="product-price">PKR ${item.pprice}</td>
+                <td class="product-quantity"><input type="number" value="${item.pquantity}" min="1" onchange="updateQuantity(event, ${index})"></td>
+                <td class="product-total">PKR ${item.ptotal}</td>
+                <td class="cart-buttons"><a href="checkout.html" class="boxed-btn black">Checkout</a></td>
+            `;
+
+            cartTableBody.appendChild(row);
+            subtotal += item.ptotal;
+        });
+
+        document.querySelector('.total-section .total-table tbody').innerHTML = `
+            <tr class="total-data">
+                <td><strong>Subtotal: </strong></td>
+                <td>PKR ${subtotal}</td>
+            </tr>
+            <tr class="total-data">
+                <td><strong>Shipping: </strong></td>
+                <td>PKR 45</td>
+            </tr>
+            <tr class="total-data">
+                <td><strong>Total: </strong></td>
+                <td>PKR ${subtotal + 45}</td>
+            </tr>
+        `;
+    }
+
+    window.removeFromCart = function(event) {
+        event.preventDefault();
+        let index = event.target.closest('a').dataset.index;
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartTable();
+    };
+
+    window.updateQuantity = function(event, index) {
+        let newQuantity = parseInt(event.target.value, 10);
+        if (isNaN(newQuantity) || newQuantity < 1) {
+            newQuantity = 1;
+        }
+        cart[index].pquantity = newQuantity;
+        cart[index].ptotal = cart[index].pprice * newQuantity;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartTable();
+    };
+
+    updateCartTable();
+});
+
+
+         </script>
+
+
+
+
+        </body>
+
+</html>

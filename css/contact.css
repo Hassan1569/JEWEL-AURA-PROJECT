@@ -1,0 +1,130 @@
+.contact{
+    width: 100%;
+    height: 100vh;
+    background: #f7f5f2;
+    padding-top: 70px;
+  }
+  .contact .container{
+    width: 100%;
+    height: 80vh;
+    background: white;
+    background: linear-gradient(90deg, white 80%, #e6bc68 20%);
+    border-radius: 10px;
+  }
+  .heading6{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #702c2b;
+  }
+  .heading6 span{
+    color: #e6bc68;
+  }
+  .contact p{
+    font-weight: bold;
+    font-size: 13px;
+    color: #702c2b;
+  }
+  .contact input{
+    width: 360px;
+    border: none;
+    border-bottom: 1px solid;
+  }
+  #contact-btn{
+    width: 200px;
+    height: 36px; 
+    border: none;
+    background: #e6bc68;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  #col{
+    width: 40%;
+    height: 56vh;
+    background: #702c2b;;
+    margin-top: 78px;
+    border-radius: 20px;
+  }
+  .contact h1{
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .contact #col p{
+    font-size: 15px;
+    color: white;
+    margin-left: 13px;
+    padding-top: 30px;
+  }
+  @media screen and (max-width:766px){
+    .contact .container{
+    background: white;
+    }
+    #col{
+      width: 100%;
+      background : #b2744c;
+      background : #702c2b;
+  
+    }
+    .contact{
+      height: 150vh;
+    }
+  }
+  @media screen and (max-width:400px){
+    .contact input{
+      width: 250px;
+    }
+    
+  }
+
+/* map */
+
+  .button1:hover {
+    width: 170px;
+    /* background-color: #702c2b; */
+  }
+
+  .button2 {
+    margin-top: 20px;
+    /* background-color: #702c2b; */
+  }
+
+  .map iframe {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #dark {
+    
+    color: white;
+    height: 40px;
+    width: 130px;
+    box-shadow: 0px 5px 5px -5px black !important;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: #702c2b;
+  }
+
+  #dark:hover {
+    width: 140px;
+    /* background-color: #e6bc68; */
+  }
+
+  #light {
+    border: none;
+    outline: none;
+    background-color: #e6bc68;
+    background: none;
+    box-shadow: 0px 5px 5px -5px black !important;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+
+  #light:hover {
+    width: 140px;
+    background-color: #e6bc68;
+  }

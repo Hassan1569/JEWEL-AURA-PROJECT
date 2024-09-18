@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JEWEL AURA</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="website icon" type="png" href="img/logo.jpeg">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <div id="navbar"></div>
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Find Your Birthstone</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Birthstone Finder</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Birthstone Finder Start -->
+        <div class="container-xxl px-0 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                        <h5 class="section-title ff-secondary text-start fw-normal" style="color: #e6bc68;"   >Discover Your Stone</h5>
+                        <h1 class="mb-4" style="color: #e6bc68;">Find Your Birthstone</h1>
+                        <div class="containerrr">
+                            <label for="birthday" style="color: #fff;">Enter your birthday:</label>
+                            <input type="date" id="birthday" name="birthday" class="form-control mb-3">
+                            <button class="btn btn-primary w-100 py-3" onclick="findStone()">Find My Stone</button>
+
+                            <div id="result" class="result mt-4">
+                                <h2 style="color: #fff;">Your Birthstone</h2>
+                                <p id="stone" style="color: #fff;"></p>
+                                <p id="sign" style="color: #fff;"></p>
+                                <p id="description" style="color: #fff;"></p>
+                                <p id="why" style="color: #fff;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="videos"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Birthstone Finder End -->
+
+        <!-- Footer Start -->
+        <div id="footer"></div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        function findStone() {
+            const birthday = new Date(document.getElementById("birthday").value);
+            const month = birthday.getMonth() + 1;
+            let stone = "";
+            let sign = "";
+            let description = "";
+            let why = "";
+
+            switch (month) {
+                case 1:
+                    stone = "Garnet";
+                    sign = "Capricorn/Aquarius";
+                    description = "Garnet is known for its rich red color and is said to bring energy, vitality, and protection.";
+                    why = "It's believed to balance energy and bring serenity.";
+                    break;
+                case 2:
+                    stone = "Amethyst";
+                    sign = "Aquarius/Pisces";
+                    description = "Amethyst is a purple variety of quartz that is associated with calmness and clarity.";
+                    why = "It is thought to provide protection and improve emotional stability.";
+                    break;
+                case 3:
+                    stone = "Aquamarine";
+                    sign = "Pisces/Aries";
+                    description = "Aquamarine is a blue-green stone that is believed to enhance courage and communication.";
+                    why = "It's thought to calm the mind and reduce stress.";
+                    break;
+                case 4:
+                    stone = "Diamond";
+                    sign = "Aries/Taurus";
+                    description = "Diamond is renowned for its brilliance and is said to bring strength, courage, and clarity.";
+                    why = "It symbolizes eternal love and brings mental clarity.";
+                    break;
+                case 5:
+                    stone = "Emerald";
+                    sign = "Taurus/Gemini";
+                    description = "Emerald is a vibrant green stone associated with growth, renewal, and prosperity.";
+                    why = "It's believed to enhance intuition and promote good health.";
+                    break;
+                case 6:
+                    stone = "Pearl";
+                    sign = "Gemini/Cancer";
+                    description = "Pearl is known for its lustrous beauty and is said to bring purity, wisdom, and integrity.";
+                    why = "It promotes calmness and balances emotions.";
+                    break;
+                case 7:
+                    stone = "Ruby";
+                    sign = "Cancer/Leo";
+                    description = "Ruby is a deep red gemstone that symbolizes passion, protection, and prosperity.";
+                    why = "It enhances vitality and brings success in love.";
+                    break;
+                case 8:
+                    stone = "Peridot";
+                    sign = "Leo/Virgo";
+                    description = "Peridot is a light green gemstone associated with strength, good health, and creativity.";
+                    why = "It brings healing and protects against negativity.";
+                    break;
+                case 9:
+                    stone = "Sapphire";
+                    sign = "Virgo/Libra";
+                    description = "Sapphire is known for its deep blue color and is said to bring wisdom, royalty, and divine favor.";
+                    why = "It promotes mental clarity and spiritual insight.";
+                    break;
+                case 10:
+                    stone = "Opal";
+                    sign = "Libra/Scorpio";
+                    description = "Opal is a gemstone that exhibits a play of colors and is believed to bring hope, innocence, and purity.";
+                    why = "It enhances imagination and creativity.";
+                    break;
+                case 11:
+                    stone = "Topaz";
+                    sign = "Scorpio/Sagittarius";
+                    description = "Topaz comes in various colors and is associated with love, affection, and strength.";
+                    why = "It brings joy, generosity, and good health.";
+                    break;
+                case 12:
+                    stone = "Turquoise";
+                    sign = "Sagittarius/Capricorn";
+                    description = "Turquoise is a blue-green mineral that has been prized for its beauty and reputed healing properties.";
+                    why = "It is believed to bring good fortune and a sense of peace.";
+                    break;
+                default:
+                    stone = "Unknown";
+                    sign = "Unknown";
+                    description = "Please enter a valid date.";
+                    why = "";
+            }
+
+            document.getElementById("stone").textContent = "Stone: " + stone;
+            document.getElementById("sign").textContent = "Astrological Sign: " + sign;
+            document.getElementById("description").textContent = "Description: " + description;
+            document.getElementById("why").textContent = "Why: " + why;
+        }
+    </script>
+</body>
+
+</html>
